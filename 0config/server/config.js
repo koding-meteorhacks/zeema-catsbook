@@ -6,7 +6,8 @@ if(Meteor.settings.twitterConsumerKey && Meteor.settings.twitterSecret) {
   console.info("meteor login configured via Meteor.settings");
   var twitterConfig = {
     consumerKey: Meteor.settings.twitterConsumerKey,
-    secret: Meteor.settings.twitterSecret
+    secret: Meteor.settings.twitterSecret,
+    service: "twitter",
   };
   ServiceConfiguration.configurations.insert(twitterConfig);
 } else {

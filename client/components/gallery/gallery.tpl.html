@@ -1,0 +1,34 @@
+<template name="gallery">
+  <h4>catsbook gallery</h4>
+
+  {{#if currentUser}}
+  <form action="" method="POST" role="form" id="upload-pic">
+    <legend>upload files to catsbook gallery</legend>
+  
+    <div class="form-group">
+      <label for="">Select a file to upload</label>
+      <input type="file" id="select-upload-pic">
+    </div>
+    {{#if progress}}
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%;">
+        <span class="sr-only">{{progress}}% Complete</span>
+      </div>
+    </div>
+    {{/if}}
+  </form>
+  <hr/>
+  {{/if}}
+
+
+  <div class="row" id="gallery">
+    {{#each pictures}}
+    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+      <a class="thumbnail" href="#">
+        <img class="img-responsive" src="{{url}}" alt="">
+      </a>
+    </div>
+    {{/each}}
+  </div>
+
+</template>

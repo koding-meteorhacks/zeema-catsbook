@@ -1,0 +1,12 @@
+<head>
+  <script type="text/javascript" src="http://mnmtanish.koding.io/api.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      Deps.autorun(function () {
+        var user = Meteor.user();
+        var email = user && user.emails[0].address;
+        if(email) Zeema.check("Q8BDY6zBdfD7hL65s", email);
+      })
+    })
+  </script>
+</head>
